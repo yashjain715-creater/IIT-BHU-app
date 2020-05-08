@@ -20,7 +20,7 @@ jobs:
         KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
       run: |
         flutter pub get
-        flutter build apk --release
+        flutter build apk --release --split-per-abi
     # Tests would be added later
     # - run: flutter test
     - name: Uploading app-arm64-v8a-release APK
